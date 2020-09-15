@@ -16,17 +16,21 @@ yarn --version
 
 #### 1.2 Initialize repo
 
-`mkdir merninator3`
-`cd merninator3`
-`yarn init`
-`yarn add typescript ts-node`
-`yarn add -D @types/node eslint prettier`
+```
+mkdir merninator3
+cd merninator3
+yarn init
+yarn add typescript ts-node
+yarn add -D @types/node eslint prettier
+```
 
 #### 1.3 VSCode configuration
 
-`yarn add @yarnpkg/pnpify`
-`yarn pnpify --sdk base`
-`yarn pnpify --sdk vscode`
+```
+yarn add @yarnpkg/pnpify
+yarn pnpify --sdk base
+yarn pnpify --sdk vscode
+```
 
 1. In a .ts file, either click notifications in the bottom-right hand corner or type Ctrl+Shift+P in the .ts file
 1. Choose "Select TypeScript Version".
@@ -34,7 +38,9 @@ yarn --version
 
 #### 1.4 TS config
 
-`yarn tsc --init -t ES2020`
+```
+yarn tsc --init -t ES2020
+```
 
 1. open tsconfig.json
 1. uncomment `"noImplicitAny": true`
@@ -43,24 +49,31 @@ yarn --version
 ### 2. Setup project-level worktree
 
 add to project-level package.json:
-`"private": true,`
-`"workspaces": [ "packages/*" ]`
+
+```
+"private": true,
+"workspaces": [ "packages/*" ]
+```
 
 ### 3. Setup client workspace
 
 #### 3.1 Get out pots and pans
 
-`mkdir packages`
-`mkdir packages/client`
-`cd packages/client`
-`yarn init`
+```
+mkdir packages
+mkdir packages/client
+cd packages/client
+yarn init
+```
 
 #### 3.2 Gather ingredients
 
-`yarn add react react-dom`
-`yarn add -D @types/react @types/react-dom @types/webpack html-webpack-plugin ts-loader typescript webpack@next webpack-cli webpack-dev-server`
+```
+yarn add react react-dom
+yarn add -D @types/react @types/react-dom @types/webpack html-webpack-plugin ts-loader typescript webpack@next webpack-cli webpack-dev-server
+```
 
-( Restart VSCode so it learns about these type definitions ;(((()
+Restart VSCode so it learns about these type definitions ;((((
 
 #### 3.3 Prepare ingredients
 
@@ -76,7 +89,10 @@ add to project-level package.json:
 ```
 
 - create Webpack config file
-  `touch webpack.config.js`
+
+```
+touch webpack.config.js
+```
 
 - Do your Webpacky thing, or copy this
 
@@ -110,8 +126,10 @@ module.exports = {
 
 #### 3.4 Start cooking
 
-`mkdir src`
-`touch src/index.tsx`
+```
+mkdir src
+touch src/index.tsx
+```
 
 ```
 import React from 'react';
@@ -123,7 +141,9 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 
 ```
 
-`touch src/App.tsx`
+```
+touch src/App.tsx
+```
 
 ```
 import React from 'react';
@@ -135,7 +155,9 @@ export default function App()
 
 ```
 
-`touch src/index.html`
+```
+touch src/index.html
+```
 
 ```
 <!DOCTYPE html>
@@ -156,7 +178,9 @@ export default function App()
 
 #### 3.5 - Put food into dishes and serve
 
-`yarn build`
-`yarn dev`
+```
+yarn build
+yarn dev
+```
 
 open http://localhost:8080 in your browser :)
