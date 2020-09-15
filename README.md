@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-```
+```bash
 yarn
 yarn dev
 ```
@@ -19,7 +19,7 @@ If you'd like to know how to rebuild this project from scratch, here's how:
 
 #### 1.1 Install Yarn 2/berry/modern
 
-```
+```bash
 npm install -g yarn
 yarn set version berry
 yarn --version
@@ -29,7 +29,7 @@ yarn --version
 
 #### 1.2 Initialize repo
 
-```
+```bash
 mkdir merninator3
 cd merninator3
 yarn init
@@ -39,7 +39,7 @@ yarn add -D @types/node eslint prettier
 
 #### 1.3 VSCode configuration
 
-```
+```bash
 yarn add @yarnpkg/pnpify
 yarn pnpify --sdk base
 yarn pnpify --sdk vscode
@@ -52,7 +52,7 @@ yarn pnpify --sdk vscode
 
 #### 1.4 TS config
 
-```
+```bash
 yarn tsc --init -t ES5
 ```
 
@@ -64,7 +64,7 @@ yarn tsc --init -t ES5
 
 add to project-level package.json:
 
-```
+```json
 "private": true,
 "workspaces": [ "packages/*" ],
 "scripts": {
@@ -76,7 +76,7 @@ add to project-level package.json:
 
 #### 3.1 Get out pots and pans
 
-```
+```bash
 mkdir packages
 mkdir packages/client
 cd packages/client
@@ -85,7 +85,7 @@ yarn init
 
 #### 3.2 Gather ingredients
 
-```
+```bash
 yarn add react react-dom
 yarn add -D @types/react @types/react-dom @types/webpack html-webpack-plugin ts-loader typescript webpack@next webpack-cli webpack-dev-server
 ```
@@ -96,7 +96,7 @@ Restart VSCode so it learns about these type definitions ☹️
 
 - add to client workspace-level package.json:
 
-```
+```json
 "scripts": {
    "build": "webpack --config webpack.config.js",
    "webpack-dev-server": "webpack-dev-server",
@@ -107,13 +107,13 @@ Restart VSCode so it learns about these type definitions ☹️
 
 - create Webpack config file
 
-```
+```bash
 touch webpack.config.js
 ```
 
 - Do your Webpacky thing, or copy this
 
-```
+```javascript
 const path = require('path');
 
 module.exports = {
@@ -143,12 +143,12 @@ module.exports = {
 
 #### 3.4 Start cooking
 
-```
+```bash
 mkdir src
 touch src/index.tsx
 ```
 
-```
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -158,11 +158,11 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 
 ```
 
-```
+```bash
 touch src/App.tsx
 ```
 
-```
+```javascript
 import React from 'react';
 
 export default function App()
@@ -172,11 +172,11 @@ export default function App()
 
 ```
 
-```
+```bash
 touch src/index.html
 ```
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,7 +195,7 @@ touch src/index.html
 
 #### 3.5 - Put food into dishes and serve
 
-```
+```bash
 yarn build
 yarn dev
 ```
