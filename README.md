@@ -53,12 +53,12 @@ yarn pnpify --sdk vscode
 #### 1.4 TS config
 
 ```
-yarn tsc --init -t ES2020
+yarn tsc --init -t ES5
 ```
 
 1. open tsconfig.json
-1. uncomment `"noImplicitAny": true`
-1. uncomment `"jsx": "preserve"` and change value to `"react"`
+1. uncomment `"lib": []` and set array to `["dom", "dom.iterable", "esnext"]`
+1. uncomment `"jsx": "preserve"`
 
 ### 2. Setup project-level worktree
 
