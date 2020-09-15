@@ -6,9 +6,12 @@
 
 #### 1.1 Install Yarn 2/berry/modern
 
-`npm install -g yarn`
-`yarn set version berry`
-`yarn --version`
+```
+npm install -g yarn
+yarn set version berry
+yarn --version
+```
+
 (note: I think you can also set version per vscode workspace)
 
 #### 1.2 Initialize repo
@@ -43,7 +46,7 @@ add to project-level package.json:
 `"private": true,`
 `"workspaces": [ "packages/*" ]`
 
-### 3. Setup client workspace:
+### 3. Setup client workspace
 
 #### 3.1 Get out pots and pans
 
