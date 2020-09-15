@@ -58,7 +58,7 @@ yarn tsc --init -t ES5
 
 1. open tsconfig.json
 1. uncomment `"lib": []` and set array to `["dom", "dom.iterable", "esnext"]`
-1. uncomment `"jsx": "preserve"`
+1. uncomment `"jsx": "preserve"` and change value to `"react"`
 
 ### 2. Setup project-level worktree
 
