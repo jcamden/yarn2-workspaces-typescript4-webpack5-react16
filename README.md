@@ -1,6 +1,19 @@
 # Merninator3
 
+## Getting Started
+
+```
+yarn
+yarn dev
+```
+
+open http://localhost:8080 in your browser
+
+Note: although this project uses Yarn 2, I have disabled the zero-installs functionality for now in order to limit the size of the repo. You can re-enable that funcitonality, if you want, by swapping certain commented out lines in .gitignore.
+
 ## DIY:
+
+If you'd like to know how to rebuild this project from scratch, here's how:
 
 ### 1. Get Yarn 2 and VSCode to Start Dating
 
