@@ -32,7 +32,8 @@ yarn pnpify --sdk base
 yarn pnpify --sdk vscode
 ```
 
-1. In a .ts file, either click notifications in the bottom-right hand corner or type Ctrl+Shift+P in the .ts file
+1. Create some random .ts file. (`touch index.ts`)
+1. Either click notifications in the bottom-right-hand corner or type Ctrl+Shift+P in the .ts file
 1. Choose "Select TypeScript Version".
 1. Pick "Use Workspace Version".
 
@@ -52,7 +53,10 @@ add to project-level package.json:
 
 ```
 "private": true,
-"workspaces": [ "packages/*" ]
+"workspaces": [ "packages/*" ],
+"scripts": {
+    "client": "yarn workspace client dev"
+  },
 ```
 
 ### 3. Setup client workspace
@@ -73,7 +77,7 @@ yarn add react react-dom
 yarn add -D @types/react @types/react-dom @types/webpack html-webpack-plugin ts-loader typescript webpack@next webpack-cli webpack-dev-server
 ```
 
-Restart VSCode so it learns about these type definitions ;((((
+Restart VSCode so it learns about these type definitions ☹️
 
 #### 3.3 Prepare ingredients
 

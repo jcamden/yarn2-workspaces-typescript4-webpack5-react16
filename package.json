@@ -4,6 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "client": "yarn workspace client dev"
+  },
   "dependencies": {
     "@yarnpkg/pnpify": "^2.2.1",
     "ts-node": "^9.0.0",
